@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kutular</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      main {
+        background-color: rgb(65, 69, 195);
+
+        /* ................ */
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      div {
+        height: 200px;
+        width: 200px;
+        text-align: center;
+        padding: 20px;
+        margin: 15px;
+        color: white;
+        border: 10px dashed green;
+        /* float: left; */
+        outline: 10px solid #ffff0081;
+        outline-offset: 5px;
+
+        /* ................ */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        border: 10px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div style="background-color: #181717">Kutu 1</div>
+      <div style="background-color: #d3b7b7">Kutu 2</div>
+      <div style="background-color: #a48686">Kutu 3</div>
+      <div style="background-color: #6d5353">Kutu 4</div>
+      <div style="background-color: #755a5a">Kutu 5</div>
+      <div style="background-color: #674444">Kutu 6</div>
+      <div style="background-color: #642e2e">Kutu 7</div>
+      <div style="background-color: #7d2727">Kutu 8</div>
+      <div style="background-color: #c31c1c">Kutu 9</div>
+      <div style="background-color: #ef0b0b">Kutu 10</div>
+    </main>
+  </body>
+</html>
