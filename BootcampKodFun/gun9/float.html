@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float ile çalşmak ve Float temizliği</title>
+    <style>
+      .hepsi {
+        border: 5px dashed black;
+      }
+
+      .kutu {
+        width: 50px;
+        height: 50px;
+        background-color: orange;
+        color: white;
+        margin: 10px;
+        float: right;
+      }
+
+      /* 2n yerine even da verilebilir */
+      .kutu:nth-child(2n) {
+        float: left;
+      }
+
+      /* Çözüm 1: floatın kesilmesini istediğimiz elemandan sonra oluşturulan boş bir div'e bu sınıf verilir. İçerik bu boş div'de "bitiyor" sinyali verir*/
+      .temizlik {
+        clear: both;
+      }
+
+      /* sadece css çözümü*/
+      /* .hepsi::after --> hepsi div'inin "kapanışından hemen öncesi" */
+      .hepsi::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hepsi">
+      <div class="kutu">Kutu 1</div>
+      <div class="kutu">Kutu 2</div>
+      <div class="kutu">Kutu 3</div>
+      <div class="kutu">Kutu 4</div>
+      <div class="kutu">Kutu 5</div>
+      <div class="kutu">Kutu 6</div>
+      <div class="kutu">Kutu 7</div>
+      <div class="kutu">Kutu 8</div>
+      <div class="kutu">Kutu 9</div>
+      <div class="kutu">Kutu 10</div>
+      <div class="kutu">Kutu 11</div>
+      <div class="kutu">Kutu 12</div>
+      <!-- <div class="temizlik"></div> -->
+    </div>
+  </body>
+</html>

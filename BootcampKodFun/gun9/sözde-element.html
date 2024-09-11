@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sözde Element</title>
+    <style>
+      html {
+        font-size: 24px;
+      }
+
+      p {
+        text-align: justify;
+      }
+
+      p::first-letter {
+        font-size: 300%;
+        float: left;
+        line-height: 0.75;
+        font-weight: bold;
+      }
+
+      p::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      p::first-line {
+        text-decoration: underline;
+      }
+
+      main {
+        /* background-color: #ffffff;
+        background-image: linear-gradient(
+          180deg,
+          #ffffff 0%,
+          #6284ff 50%,
+          #ff0000 100%
+        ); */
+        max-width: 600px;
+        margin: 60px auto 20px;
+        padding: 36px;
+        border-radius: 40px;
+        box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+        background: #fffef0;
+      }
+
+      @media (max-width: 720px) {
+        main {
+          margin: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit quam
+        sapiente esse veniam sed officiis, laborum ratione aperiam repellendus
+        explicabo expedita vero omnis minus fugiat consequuntur nisi? Tempora,
+        et sapiente.
+      </p>
+      <p>
+        Ratione repudiandae doloremque, cupiditate dolor itaque, eos ut
+        aspernatur dolorem quis, nam non rerum! Ullam placeat, nisi animi
+        excepturi quas doloremque ea natus quo error asperiores, tempore beatae
+        magni ducimus.
+      </p>
+      <p>
+        Delectus, laborum! Ad quisquam suscipit accusamus esse. Autem iure saepe
+        nesciunt minus voluptate numquam, a consequuntur quo corrupti
+        exercitationem assumenda labore non, provident asperiores perferendis
+        praesentium accusantium sint porro pariatur.
+      </p>
+      <p>
+        Dolorum, corporis. Sunt magnam commodi tenetur cumque. Ipsam culpa enim
+        autem, odio beatae recusandae reprehenderit ducimus tenetur totam?
+        Maxime qui doloremque deserunt omnis iure quae corrupti odio eligendi
+        suscipit? Impedit.
+      </p>
+    </main>
+  </body>
+</html>
