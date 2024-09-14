@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linkler</title>
+    <style>
+      .link2 {
+        text-decoration: none;
+      }
+
+      .link3 {
+        color: brown;
+      }
+
+      .link4 {
+        color: orange;
+        text-decoration: none;
+      }
+
+      .link4:hover {
+        color: white;
+        background-color: orange;
+      }
+
+      /* active = tıklayınca */
+      /* outline: border gibi diğer nesneleri itmez */
+      .link5:active {
+        outline: 3px solid red;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+      }
+
+      .link6 {
+        display: inline-block;
+        text-decoration: none;
+        background: #4f75ff;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 5px;
+      }
+
+      .link6:hover {
+        background: #6b8bff;
+      }
+
+      .link6:active {
+        background: #6439ff;
+      }
+
+      /* focus 0 tab'la üzerine gelince */
+      .link6:focus {
+        outline: 3px solid #4f75ff7d;
+        outline-offset: 0;
+      }
+
+      .link7 {
+        display: inline-block;
+        background-color: rgb(231, 138, 105);
+        color: white;
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.5s;
+        font-family: Arial, Helvetica, sans-serif;
+        box-shadow: 2px 2px rgba(255, 255, 0, 0.779);
+      }
+
+      .link7:hover {
+        background-color: red;
+        color: blue;
+      }
+
+      .link7:active {
+        background-color: #6439ff;
+        color: red;
+        transform: scale(0.9) rotateY(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="">href koymazsak/boş olursa link nereye gider?</a> sayfayı yeniler
+    <br />
+    <a href="/">href "/" olursa nereye gider?</a> kök dizine (BootcampKodFun/)
+    gider <br />
+    <br />
+    <a href="#" class="link1">Link 1</a> <br />
+    <a href="#" class="link2">Link 2</a> <br />
+    <a href="#" class="link3">Link 3</a> <br />
+    <a href="#" class="link4">Link 4</a> <br />
+    <a href="#" class="link5">Link 5</a> <br />
+    <a href="#" class="link6">Link 6</a> <br />
+    <a href="#" class="link7">Link 7</a>
+  </body>
+</html>
