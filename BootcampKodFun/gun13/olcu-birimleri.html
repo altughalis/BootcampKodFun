@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 1 rem'i otomatik olarak belirler */
+      html {
+        font-size: 20px;
+      }
+
+      /* 1px ekrandaki en küçük nokta. */
+      .cubuk1 {
+        height: 20px;
+        background-color: purple;
+        width: 96px;
+      }
+
+      /* 1rem (root em) en kök element olan "html" elementinin font-size'ini alır. başka bir şeyden almaz.
+      Html kök elementinin font-size değeridir. Bir çok tarayıcıda 1rem = 16px olarak kabul edilir. */
+      .cubuk2 {
+        height: 20px;
+        background-color: pink;
+        width: 6rem;
+      }
+
+      /* 1 em bir parent'inin yani üst ebeveynin miras olarak font-size'sini alır */
+      .cubuk3 {
+        height: 20px;
+        background-color: green;
+        width: 6em;
+      }
+
+      .cubuk2-kapsayici {
+        font-size: 10px;
+      }
+
+      .cubuk3-kapsayici {
+        font-size: 10px;
+      }
+
+      /* 1px ekrandaki en ufak nokta(mobil cihazlarda cihagöre ölçekleme sağlamak için viewport meta takullanılır ve px hesaplaması 2-3 noktaya karşılgelecek şekilde hesaplanabilir.)
+1rem:"html" kök elementinin font-size değeridir. Birçok tarayıcıda html elementi 16px varsayılan bir font değerine sahiptir.
+1em: Bir elementin parent'ından miras aldığı font-size'ına karşılık gelir. */
+    </style>
+  </head>
+  <body>
+    <h1>Ölçü birimleri</h1>
+    <h2>Genişliği 96px olan bir div</h2>
+    <div class="cubuk1"></div>
+
+    <h2>Genişliği 6rem olan bir div</h2>
+    <div class="cubuk2-kapsayici">
+      <div class="cubuk2"></div>
+    </div>
+
+    <div class="cubuk3-kapsayici">
+      <h2>Genişliği 6em olan bir div</h2>
+      <div class="cubuk3"></div>
+    </div>
+    <hr />
+    <style>
+      .soru1 {
+        font-size: 4px;
+      }
+
+      .soru1-a,
+      .soru1-b,
+      .soru1-c {
+        font-size: 1.5rem;
+      }
+    </style>
+    <div class="soru1">
+      <div class="soru1-a">
+        <div class="soru1-b">
+          <!-- bu yazının hesaplanmış boyutu kaç px'dir -->
+          <div class="soru1-c">SORU 1: MOLA YAKLAŞIYOR (4x1.5 x 1.5 x 1.5)</div>
+          <!-- cevap: (4x1.5 x 1.5 x 1.5) 13,5 px -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
