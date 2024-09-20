@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Order</title>
+    <style>
+      .tumu {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .tumu > div {
+        background-color: black;
+        color: white;
+      }
+
+      .a {
+        order: 1;
+      }
+
+      .d {
+        order: -333;
+      }
+
+      /* Çocukların varsayılan order'i sıfır'dır, ince ayar için hepsine uygun büyüklü küçüklü, sıralama için değer verilir */
+    </style>
+  </head>
+  <body>
+    <div class="tumu">
+      <div class="a">Adana</div>
+      <div class="b">Bursa</div>
+      <div class="c">Ceyhan</div>
+      <div class="d">Denizli</div>
+      <div class="e">Edirne</div>
+      <div class="f">Fatsa</div>
+      <div class="g">Gümüşhane</div>
+    </div>
+  </body>
+</html>
