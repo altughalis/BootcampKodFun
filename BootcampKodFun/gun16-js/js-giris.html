@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Giriş</title>
+  </head>
+  <body>
+    <h1>JavaScript Giriş</h1>
+    <!-- P içini js ile değiştirebilir miyiz? -->
+    <p></p>
+
+    <script>
+      // JavaScript kodları bu bloğa yazılır.
+      // DOM ağacının tepesinde "document" isimli bir nesne vardır. Bu nesne üzerinden belirli yöntemlerle tüm elementlere erişilebilir.
+
+      // Aşağıda ilk "p"ye erişerek içeriğini yazdık/değiştirdik.
+
+      // Nesnelerin özelliklerine "." operatörüyle erişip, "=" oparatöriyle yeni değerler verebiliriz.
+      let ilkParag = document.querySelector("p");
+
+      // elementlerin özelliklerinin özelliklerine erişip değiştirebiliriz.
+      ilkParag.textContent =
+        "Biz kimseyi yarı yolsa bırakmadık, onlar müsait bir yerde indiler - Bir Kamyon Arkası Sözü";
+
+      ilkParag.style.color = " purple";
+
+      // document dallarından biri olan "body"'e ulaştık'
+      document.body.style.background =
+        "linear-gradient(to right, orange, white)";
+
+      // PROGRAMLAMA:
+      // KOMUTLARIN  BELLİ BİR SIRADA BELİRLİ BİR AMAÇ İÇİN ÇALIŞTIRILMASI (ALGORİTMA İLE)
+      // KOMUTLAR İNSAN DİLİNE YUAKIN BİR DİLLE BİLGİSAYARA İŞ YAPMASI İÇİN FISILDAMAKTIR
+      // alert("Hooooppp....palaaaaa");
+      // alert("Hoşgeldin :)");
+    </script>
+  </body>
+</html>
