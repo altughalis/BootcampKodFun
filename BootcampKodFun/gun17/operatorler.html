@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operatörler</title>
+  </head>
+  <body>
+    <script src="../ortak/yaz.js"></script>
+    <script>
+      // Operatör, taraflar arasında belli işlemleri yaparak yeni sonuçlar ürettiren sembollü araçlardır.
+
+      //   Aritmetik operatörleri: +, -, *, /, %, **
+      yaz(4 + 4);
+      ciz();
+
+      yaz("4" + 4);
+
+      //   typeof operatörü sağındaki verinin türünü string olarak döndürür
+      let ispat = "4" + 4;
+      yaz(typeof ispat);
+
+      //   çarpma işlemi
+      yaz(3 * 4);
+
+      //   çarpma işlemi taraflarında sayı ister, string varsa sayıya dönüştürülür
+      yaz("2" * "2");
+
+      //   () parantez operatörü metotları/fonksiyonları çağırmaya (call) yarar.
+      ciz();
+
+      let f = ciz;
+      f();
+
+      //   . nokta operatörü bir nesnenin üyelerine (metod ya da property)erişmeyi ve değiştirmeyi sağlar
+
+      //   eriştik/elde ettik
+      yaz(document.title);
+      //   değiştirdik
+      document.title = "Adana Kebap + Kola + Paklava";
+
+      //  bir değişkenin içindeki değere ekleme yapma kısayolu
+      let a = 3;
+      //   a'ya 4 ekleyip a!ya eşitle
+      //   a = a + 4;
+      a += 4;
+      yaz(a);
+
+      let s1 = 2;
+      //   s1 = s1 * s1;
+      s1 *= s1;
+      yaz(s1);
+
+      let s2 = 2 + 3 * 4;
+      yaz(s2);
+
+      let s3 = (2 + 3) * 4;
+      yaz(s3);
+
+      let s4 = "falanca" + 4 + 3;
+      yaz(s4);
+
+      let s5 = 3 + 4 + "falanca";
+      yaz(s5);
+
+      let s6 = "2" + 4 * 3;
+      yaz(s6);
+      yaz(typeof s6);
+
+      let s7 = ("2" + 4) * 3;
+      yaz(s6);
+      yaz(typeof s7);
+    </script>
+
+    <button onclick="f()">ÇİZGİ ÇİZ</button>
+  </body>
+</html>
