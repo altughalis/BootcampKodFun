@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Increment & Decrement</title>
+  </head>
+  <body>
+    <script src="../ortak/yaz.js"></script>
+    <script>
+      let a = 1;
+      //   a += 1; ikisi de aynı şeyler
+      a++;
+      yaz(a);
+      ciz();
+
+      // a += 1;: a'yı hemen bir artırır.
+      // a++;: Önce mevcut değeri kullanır, sonra a'yı bir artırır (post-increment).
+      // Bir de pre-increment durumu vardır: ++a;. Bu, a'yı bir artırıp, artırılmış değeri kullanır.
+
+      let c = 5;
+      yaz(c++);
+      ciz();
+      //   ilk çıkışta c'nin değeri 5 ardından gelen işlemlerde ++'dan dolayı 6 olarak alınır'
+
+      let d = 3;
+      yaz(d++ * d);
+      ciz();
+
+      //   ++e;. Bu, e'yı bir artırıp, artırılmış değeri kullanır.
+      let e = 3;
+      yaz(++e * e);
+      ciz();
+
+      let f = 10;
+      yaz(f-- + --f);
+      ciz();
+
+      let g = 3;
+      yaz(++g - g--);
+      yaz(g);
+      ciz();
+
+      let h = 4;
+      h = h++;
+      yaz(h);
+      ciz();
+
+      let i = 7;
+      i = ++i;
+      yaz(i);
+      ciz();
+    //   ...
+      temizle();
+
+      let j = 5;
+      //   j = j * j++
+      j *= j++;
+      yaz(j);
+      ciz();
+
+      let k = 0;
+      yaz(k++ - --k);
+      yaz(k);
+      ciz();
+
+      let l = 3;
+      l = l + l * l++;
+      yaz(l);
+      ciz();
+
+      let m = 2;
+      m = m * (m + ++m);
+      yaz(m);
+      ciz();
+
+      let n = 3;
+      let sonuc = n++ == 3 || ++n == 5;
+      yaz(sonuc);
+      yaz(n);
+      ciz();
+
+      let o = 40;
+      yaz(o < 39 && ++o == 41);
+      yaz(o);
+      ciz();
+
+      let p = 2;
+      if (++p == p++) yaz(p);
+    </script>
+  </body>
+</html>
