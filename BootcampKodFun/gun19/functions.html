@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fonksiyonlat</title>
+  </head>
+  <body>
+    <script src="../ortak/yaz.js"></script>
+    <script>
+      // 4 çeşit fonksiyonu örnekleyelim:
+      //   1. PARAMETRE ALMAYAN DEĞER DÖNDÜRMEYEN
+      //   2. PARAMETRE ALMAYAN DEĞER DÖNDÜREN --> parametre vermeye gerek yok
+      //   3. PARAMETRE ALAN DEĞER DÖNDÜRMEYEN
+      //   4. PARAMETRE ALAN DEĞER DÖNDÜREM
+
+      //   1. parametre almayan ve değer döndürmeyen
+      function ekranaTarihiVeSaatiYazdir() {
+        let suAn = new Date();
+        yaz(suAn.toLocaleString("tr"));
+      }
+      ekranaTarihiVeSaatiYazdir();
+      ciz();
+
+      // 2. parametre almayan değer döndürem
+      function ayinGunu() {
+        let suAn = new Date();
+        return suAn.getDate();
+      }
+
+      let kacinci = ayinGunu();
+      yaz("Bugün ayın " + kacinci + ". günüdür");
+      ciz();
+
+      //  3. parametre alan değer döndürmeyen
+      //   işçi fonskiyon
+      //   arkaplanı boyar
+      function arkaplaniBoya(renk) {
+        document.body.style.background = renk;
+      }
+      arkaplaniBoya("linear-gradient(to right, #333, #777 )");
+      //   parametreyi ("linear-gradient(to right, #333, #777 )") alıp "function arkaplaniBoya(renk)..." kısmına yani fonksiyonun ilk oluşturulma satırındaki parantez içindeki kısıma ışınlar
+
+      // "f(x) = x+1" gibi...
+      //   4. parametre alan ve değer döndüren fonksiyon
+      function birFazlasi(x) {
+        return x + 1;
+      }
+
+      let sayi = 3;
+      sayi = birFazlasi(sayi);
+      yaz(sayi);
+      ciz();
+    </script>
+  </body>
+</html>
