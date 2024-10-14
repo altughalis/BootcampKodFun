@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diziler/Arrays</title>
+  </head>
+  <body>
+    <script src="/BootcampKodFun/ortak/yaz.js"></script>
+    <script>
+      // Diziler/Arrays
+      // Diziler, bir veya daha fazla veri türünü depolayan bir veri yapısı
+
+      let apartman = ["betül", "güneş", "metin", "burak"];
+      // (bunu apartman olarak düşünelim, 0. katta betiül, 1. katta gümeş, 2.katta metin ve 3. kattta da burak var)
+      yaz("Apartmandaki kat sayısı (Dizinin uzunluğu): " + apartman.length);
+      yaz("Apartrman sakinleri (Dizi elemanları): " + apartman.toString());
+      ciz();
+
+      // "Apartmana sakin ekleme (Diziye eleman ekleme):
+      apartman.push("canap");
+      yaz("canap eklendi " + apartman);
+      ciz();
+
+      // dizinin belilrli bir sıradaki elemanına erişme:
+      yaz("dizinin 3 nolu indexindeki eleman: " + apartman[3]);
+      ciz();
+
+      // diziye eleman ekleme:
+      // 1. indekse mahmut ekleme:
+      // apartman.splice(1, 0, "mahmut");
+      apartman[1] = "mahmut";
+      yaz("Apartmanın 1. indeksine mahmut taşındı: <br>" + apartman);
+      ciz();
+
+      // bir arrayın/dizinin başına eleman ekleme:
+      apartman.unshift("altuğ");
+      yaz("dizinin/arrayın başına altuğ eklendi: " + apartman);
+      ciz();
+
+      // hem alır hem siler shift()
+      let ilki = apartman.shift();
+      yaz("silinen: " + ilki);
+      yaz("dizinin ilk elemanını sildik: <br>" + apartman);
+      ciz();
+
+      // pop() sondakini döndürür ve siler
+      let sonu = apartman.pop();
+      yaz("silinen: " + sonu);
+      yaz("dizinin ilk elemanını sildik: <br>" + apartman);
+      ciz();
+
+      // diziden eleman silme ve ekleme
+      // dizinin 2. indeksindeki elemanı sil yerine "zeki koy"
+      apartman.splice(2, 1, "zeki");
+      yaz("2. indeksteki elemanı sildikten sonra:");
+      yaz(apartman);
+      ciz();
+
+      // silme işlemi yapmadan ekleme
+      yaz("2. indeksine 'sezai' elemanını koy");
+      apartman.splice(2, 0, "sezai");
+      yaz(apartman);
+      ciz();
+
+      // dizi yan ımladık
+      // elemanlarına eriştik
+      // elemanları güncelledik (indeks no ile)
+      // başa, sona ve araya yeni öğe ekledik
+      // baştan, sondan ve aradan eleman sildik
+    </script>
+  </body>
+</html>

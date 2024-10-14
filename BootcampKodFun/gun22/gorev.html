@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Görev</title>
+  </head>
+  <body>
+    <h1>Görev</h1>
+    <ul>
+      <li>6 elemanlı bir sayı dizisi oluştur: 4, 8, 15, 16, 23, 42</li>
+      <li>Başına 10 ekle</li>
+      <li>Sonuna 99 ekle</li>
+      <li>2. indeksten başlayarak 3 adet sayı sil</li>
+      <li>3. indekse 77 sayısını sok (mevcutlara dokunmadan)</li>
+      <li>2. indeksteki sayıyı güncelle: 66</li>
+      <li>Başını sil ve silineni yazdır</li>
+      <li>Sonunu sil ve silineni yazdır</li>
+    </ul>
+
+    <script src="/BootcampKodFun/ortak/yaz.js"></script>
+    <script>
+      let dizi = [4, 8, 15, 16, 23, 42];
+      yaz(dizi);
+      ciz();
+
+      dizi.unshift(10);
+      yaz(dizi);
+      ciz();
+
+      dizi.push(99);
+      yaz(dizi);
+      ciz();
+
+      dizi.splice(2, 3);
+      yaz(dizi);
+      ciz();
+
+      dizi.splice(3, 0, 77);
+      yaz(dizi);
+      ciz();
+
+      dizi[2] = 66;
+      yaz(dizi);
+      ciz();
+
+      let ilkiSİl = dizi.shift();
+      yaz(ilkiSİl);
+      ciz();
+
+      let sonuSil = dizi.pop();
+      yaz(sonuSil);
+      ciz();
+    </script>
+  </body>
+</html>
