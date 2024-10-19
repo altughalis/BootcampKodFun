@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js İle DOM Elementi Oluşturma</title>
+  </head>
+  <body>
+    <script>
+      const baslik = document.createElement("h1");
+      baslik.textContent = "Merhaba Dünya!";
+      // Oluşan elementi DOM ağacına eklememiz lazım
+      document.body.append(baslik);
+
+      // P Elementi Oluşturma
+      let parag = document.createElement("p");
+      parag.textContent = "Bu bir paragraf. ";
+      // Oluşan elementi DOM ağacına eklememiz lazım
+      document.body.append(parag);
+
+      const guclu = document.createElement("strong");
+      guclu.textContent =
+        "Bu cümleyi koyamayıp, paragrafın sonuna ekleyemeyeceğimi iddia ettiler";
+      // Oluşan elementi DOM ağacına eklememiz lazım
+      parag.append(guclu);
+
+      const vurgulu = document.createElement("em");
+      vurgulu.textContent = "Bilmiyorum Hocam";
+      parag.prepend(vurgulu);
+
+      // başlıktan sonra yatay çizgi
+      const cizgi = document.createElement("hr");
+      baslik.after(cizgi);
+
+      //  developer tolls üzerinden elementi seç ve properties sekmesinde kontrol et
+      // baslik.
+    </script>
+  </body>
+</html>
