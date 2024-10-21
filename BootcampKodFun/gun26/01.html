@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Görev 1</title>
+  </head>
+  <body>
+    <h1>Deneme</h1>
+    <!-- GÖREV 1: HTML dökümanı oluştur. body elementine js yardımıyla 2 ile 2'nin toplamını yazdır -->
+    <script>
+      // 1. yöntem
+      let x = 2 + 2;
+      document.write(x);
+      // document.body.innerHTML += x;
+      document.write("<hr>");
+
+      // yöntem 2
+      let sayi1 = 2;
+      let sayi2 = 2;
+      let toplam = sayi1 + sayi2;
+      document.write(toplam);
+
+      // töntyem 3:
+      let div = document.createElement("div");
+      div.textContent = 2 + 2;
+      div.style.backgroundColor = "black";
+      div.style.color = "white";
+      div.style.marginTop = "1rem";
+      div.style.padding = "1rem";
+      document.body.appendChild(div);
+    </script>
+  </body>
+</html>

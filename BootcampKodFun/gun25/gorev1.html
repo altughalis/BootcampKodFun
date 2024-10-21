@@ -72,9 +72,11 @@
       frm.addEventListener("submit", function (event) {
         event.preventDefault(); // Formun varsayılan gönderimini iptal et
         let ulkeAd = txt.value.trim(); // Boşlukları temizle
+
+        // İlk harfi büyük, geri kalanı küçük ve Türkçe karakter duyarlı hale getir
         ulkeAd =
-          ulkeAd[0].toLocaleUpperCase("tr") +
-          ulkeAd.substr(1).toLocaleLowerCase("tr");
+          ulkeAd.charAt(0).toLocaleUpperCase("tr-TR") +
+          ulkeAd.slice(1).toLocaleLowerCase("tr-TR");
 
         if (ulkeAd) {
           dizi.unshift(ulkeAd); // Yeni ülkeyi dizinin başına ekle

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Görev 2</title>
+  </head>
+  <body>
+    <!-- görev 2: bir buton koy tıklayınca buton kaybolsun -->
+
+    <!-- YÖNTEM 1 -->
+    <button
+      onclick="document.getElementById('buttony').style.display = 'none'"
+      id="buttony"
+    >
+      Beni yok et
+    </button>
+
+    <button id="btn2">Tkla, Kaybolsun</button>
+    <button id="btn3">Tkla, Kaybolsun</button>
+    <script>
+      // YÖNTEM 2
+      const btn2 = document.querySelector("#btn2");
+      btn2.addEventListener("click", function () {
+        btn2.remove();
+      });
+
+      //   istek addeventlistener yerine onclick kullan ve bu onclick'e atayacağın fonksiyonu arrow func olarak tanımla
+      //   YÖNTEM 3
+      const btn3 = document.querySelector("#btn3");
+      btn3.onclick = () => {
+        btn3.remove();
+      };
+    </script>
+    <!-- // yöntem 4: event parametresi kullanarak -->
+    <button id="btn4">Tıkla</button>
+    <script>
+      document.getElementById("btn4").onclick = function (event) {
+        event.target.remove();
+      };
+    </script>
+
+    <!-- // yöntem 5: event parametresi kullanarak -->
+    <button id="btn5">Tıkla</button>
+    <script>
+      document.getElementById("btn5").onclick = (e) => e.target.remove();
+    </script>
+  </body>
+</html>

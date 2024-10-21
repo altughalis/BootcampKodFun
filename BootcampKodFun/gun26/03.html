@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Görev 3</title>
+  </head>
+  <body>
+    <!-- Parametre olarak aldığı sayının karesini hesaplayan fonksiyonu arrow fonk şeklinde tanımla ve bir değişkende sakla. Bu fonksiiyonu kullanarak 1'den 10'a kadar olarn sayıların karelerini html'de ul'nin içine li'ler halinde ekle -->
+    <ul id="liste1"></ul>
+  </body>
+  <script>
+    // Parametre olarak aldığı sayının karesini hesaplayan arrow fonksiyon
+    const kare = (num) => num * num;
+
+    // 1'den 10'a kadar olan sayıların karelerini ul'nin içine li olarak eklemek
+    const liste1 = document.getElementById("liste1");
+
+    for (let i = 1; i <= 10; i++) {
+      const li = document.createElement("li");
+      li.textContent = `${i}'nin karesi: ${kare(i)}`;
+      liste1.appendChild(li);
+    }
+  </script>
+</html>

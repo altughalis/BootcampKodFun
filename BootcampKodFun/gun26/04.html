@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Görev 4</title>
+  </head>
+  <body>
+    <!-- GÖREV 4: İçinde 1 yazan buton koy, her basışında değeri 1 artsın. Önemli not: bir olur da html üzeriden sayıyı  10 yapoarsa kendini ona adapte etsin.  -->
+    <button id="sayiartirma">5</button>
+
+    <script>
+      const sayiartirma = document.getElementById("sayiartirma");
+      sayiartirma.onclick = () => {
+        let currentValue = parseInt(sayiartirma.textContent);
+        sayiartirma.textContent = currentValue + 1;
+      };
+    </script>
+  </body>
+</html>
